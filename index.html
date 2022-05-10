@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./style.css">
+    
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="tip-calculator-app">
+      <div class="data-area">
+        <div class="section">
+          <label class="heading">Bill</label>
+          <input class="bill-input" value="0" pattern="/^\d*\.?\d*$/" oninput="tip_calculator_app.onBillChanged(value)">
+        </div>
+
+        <div class="section tip-section">
+          <label class="heading">Select Tip %</label>
+          <div class="tip-select">
+            <button class="tip-input" onclick="tip_calculator_app.onTipChanged(5);">5%</button>
+            <button class="tip-input" onclick="tip_calculator_app.onTipChanged(10);">10%</button>
+            <button class="tip-input" onclick="tip_calculator_app.onTipChanged(15);">15%</button>
+            <button class="tip-input" onclick="tip_calculator_app.onTipChanged(25);">25%</button>
+            <button class="tip-input" onclick="tip_calculator_app.onTipChanged(50);">50%</button>
+            <input class="tip-input" placeholder="Custom" onchange="tip_calculator_app.onTipChanged(value);">
+          </div>
+          
+        </div>
+        
+        <div class="section">
+          <label class="heading">Number of People</label>
+          <input class="people-input" value="0" oninput="tip_calculator_app.onPeopleChanged(value)">
+        </div>
+      </div>
+      <div class="result-area">
+        <div class="result-section">
+          <label class="result-label">Tip Amount<br/>/ person</label>
+          <div>
+            <img src="images/icon-dollar.svg">
+            <p id="tip-amount" class="result-value">0.00</p>
+          </div>
+          
+        </div>
+        
+        <div class="result-section">
+          <label class="result-label">Total<br/>/ person</label>
+          <div>
+            <img src="images/icon-dollar.svg">
+            <p id="total-amount" class="result-value">0.00</p>
+          </div>
+        </div>
+
+        <button onclick="tip_calculator_app.reset();">Reset</button>
+      </div>
+    </div>
+    
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

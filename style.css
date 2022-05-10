@@ -1,0 +1,141 @@
+:root {
+    --desktop-width: 1440px;
+    --mobile-width: 375px;
+    --primary-color: hsl(172, 67%, 45%);
+    --font-family: Space Mono;
+    --font-weight: 700;
+    --main-bg-color: hsl(185, 41%, 84%);
+    --app-bg-color: hsl(0, 0%, 100%);
+    --secondary-app-bg-color: hsl(183, 100%, 15%);
+    --input-bg-color: hsl(189, 41%, 97%);
+    --button-font-color: hsl(0, 0%, 100%);
+
+    --VeryDarkCyan: hsl(183, 100%, 15%);
+    --DarkGrayishCyan: hsl(186, 14%, 43%);
+    --GrayishCyan: hsl(184, 14%, 56%);
+    --LightGrayishCyan: hsl(185, 41%, 84%);
+    --VeryLightGrayishCyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--main-bg-color);
+    font-family: var(--font-family);
+}
+
+button {
+    cursor:pointer;
+}
+
+.tip-calculator-app {
+    background-color: var(--app-bg-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px;
+    border-radius: 5px;
+    width: 700px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.data-area {
+    padding: 20px 35px 20px 20px;
+    box-sizing: border-box;
+}
+
+.data-area .heading {
+    display: block;
+    font-weight: var(--font-weight);
+    width: 100%;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.data-area input {
+    padding: 0px 5px;
+    background-color: var(--input-bg-color);
+    box-sizing: border-box;
+}
+
+.data-area button {
+    background-color: var(--secondary-app-bg-color);
+    color: var(--button-font-color);
+}
+
+.data-area input, button  {
+    border: none;
+    border-radius: 5px;
+    font-weight: var(--font-weight);
+    font-size: 16px;
+    height: 35px;
+}
+
+.data-area .bill-input {
+    background: url(images/icon-dollar.svg) no-repeat scroll 7px 7px;
+    background-color: var(--input-bg-color);
+}
+
+.data-area .people-input {
+    background: url(images/icon-person.svg) no-repeat scroll 7px 7px;
+    background-color: var(--input-bg-color);
+}
+
+.data-area .bill-input, .people-input {
+    width: 100%;
+    display: block;
+    text-align: right;
+}
+
+.data-area .tip-section {
+    padding: 35px 0px;
+}
+
+.data-area .tip-select {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.data-area .tip-input, .tip-input::placeholder {
+    text-align: center;
+}
+
+.result-area {
+    padding: 45px 30px 30px 30px;
+    border-radius: 5px;
+    background-color: var(--secondary-app-bg-color);
+}
+
+.result-area .result-section {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.result-area .result-label {
+    color: var(--button-font-color);
+    font-size: 16px;
+    font-weight: var(--font-weight);
+    justify-self: start;
+}
+
+.result-area .result-value {
+    color: var(--button-font-color);
+    font-size: 40px;
+    font-weight: var(--font-weight);
+    margin: 0;
+    justify-self: end;
+}
+
+.result-area .result-value img {
+    height: 30px;
+}
+
+.result-area button {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.attribution { margin-top: 15px; font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
